@@ -1,0 +1,52 @@
+body {
+    /*font-family: 'Open Sans', sans-serif;*/
+    /*line-height: 1.75em;*/
+    /*font-size: 16px;*/
+    /*background-color: #222;*/
+    /*color: #aaa;*/
+    background-image: url("css-images/background.jpg");
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10vmin;
+    height: 5vmin;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    width: 3vmin;
+    height: 3vmin;
+    background: transparent;
+    border-top: 1vmin solid white;
+    border-right: 1vmin solid white;
+    box-shadow: 0 0 0 lightgray;
+    transition: all 200ms ease;
+}
+.arrow.left {
+    left: 0;
+    -webkit-transform: translate3d(0, -50%, 0) rotate(135deg);
+    transform: translate3d(0, -50%, 0) rotate(135deg);
+}
+.arrow:hover {
+    border-color: #ff0040;
+    box-shadow: 0.5vmin -0.5vmin 0 white;
+}
+.arrow:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-40%, -60%) rotate(90deg);
+    transform: translate(-40%, -60%) rotate(90deg);
+    width: 200%;
+    height: 200%;
+}
