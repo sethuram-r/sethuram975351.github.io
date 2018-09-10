@@ -10,7 +10,11 @@ app.config(function ($routeProvider) {
         })
         .when("/contact", {
             templateUrl: "html/contact.html"
-        });;
+        }) .when("/about", {
+        templateUrl: "html/about.html"
+    }).when("/skill", {
+        templateUrl: "html/skill.html"
+    });
 
 });
 
