@@ -32,7 +32,7 @@
 }
 
 .card.hovercard .cardheader {
-    background: url(./CSS-images/bg.jpg);
+    background: url(css-images/bg.jpg);
     background-size: cover;
     height: 175px;
 }
