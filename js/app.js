@@ -14,6 +14,8 @@ app.config(function ($routeProvider) {
         templateUrl: "html/about.html"
     }).when("/skill", {
         templateUrl: "html/skill.html"
+    }).when("/portfolio", {
+        templateUrl: "html/portfolio.html"
     });
 
 });

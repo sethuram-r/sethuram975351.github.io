@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+          integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <title>Title</title>
+    <style>
+        .button {
+            border: 2px solid black;
+            cursor: pointer;
+            letter-spacing: 0.2125rem;
+            overflow: hidden;
+            padding: 10px 15px;
+            position: relative;
+            text-align: center;
+            text-transform: uppercase;
+            transition: background 5s cubic-bezier(0.19, 1, 0.22, 1),
+            border 1s cubic-bezier(0.19, 1, 0.22, 1),
+            color 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+            user-select: none;
+            border-top-color: #ff0040;
+        }
+
+        .button a {
+            color: black;
+            font-family: "Varela Round";
+            text-decoration: none;
+
+        }
+
+        .button .mask {
+            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.5);
+            height: 100px;
+            position: absolute;
+            transform: translate3d(-120%, -50px, 0) rotate3d(0, 0, 1, 45deg);
+            transition: all 1.1s cubic-bezier(0.19, 1, 0.22, 1);
+            width: 200px;
+        }
+
+        .button .shift {
+            display: inline-block;
+            transition: all 1.1s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+
+        .button:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-color: #fff;
+            box-shadow: 0 0 5px rgba(255, 245, 245, 0.8);
+            transition: background 0s;
+        }
+
+        .button:hover a {
+            color: #fff;
+        }
+
+        .button:hover .mask {
+            background-color: #fff;
+            transform: translate3d(120%, -100px, 0) rotate3d(0, 0, 1, 90deg);
+        }
+
+        .button:hover .shift {
+            transform: translateX(5px);
+        }
+
+        .button:active {
+            background-color: #fff;
+        }
+
+        .button:active a {
+            color: #202020;
+        }
+
+        .carousel-inner img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .carousel-control-prev {
+            margin-left: -120px;
+            cursor: pointer;
+        }
+
+        .carousel-control-next {
+            margin-right: -120px;
+            cursor: pointer;
+        }
+
+        .overflow {
+            height: 300px;
+            overflow-y: scroll;
+        }
+
+        #accordion > .card{
+            color: #ff0040;
+        }
+
+        .card-header{
+           background: #0d0d0d
+        }
+        .card-header:hover{
+            background: white;
+        }
+        #accordion .card .card-header:hover{
+
+            cursor: pointer;
+        }
+        .card-body{
+            background: black;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div class="container-fluid " style="height: 810px;background:linear-gradient(-180deg, #ff0040, #ff4d79);">
+    <div class="row" style="height: 30px">
+        <div class="col-sm"></div>
+        <div class="col-sm"></div>
+        <div class="col-sm">
+            <div class="row">
+                <div class="col-sm"></div>
+                <div class="col-sm"></div>
+                <div class="col-sm" style="    padding-right: 0px;">
+                    <div class="button">
+                        <a href="#!landing">
+                            CLOSE <i class="far fa-window-close"></i>
+                        </a>
+                        <div class="mask"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm">
+            <div class="row" style="text-align: center">
+                <div class="col-sm-1"></div>
+                <div class="col-sm" style="color:  black; text-shadow: 0 0 10px #0d0d0d;"><h1>MY Portfolio</h1></div>
+                <div class="col-sm-1"></div>
+            </div>
+            <div class="row" style="height: 10px"></div>
+            <div class="row" style="text-align: center">
+                <div class="col-sm" style="border-bottom: 5px solid black;">
+                </div>
+                <div class="col-sm" style="border-bottom: 5px solid black;"></div>
+            </div>
+        </div>
+        <div class="col-sm"></div>
+    </div>
+    <div class="row" style="height: 50px"></div>
+    <div class="row" style="height: 50px; ">
+        <div class="col-sm-1"></div>
+        <div class="col-sm">
+            <h2 style="color: black;text-transform: uppercase"> Professional Projects</h2>
+        </div>
+        <div class="col-sm-1"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-1"></div>
+
+        <div class="col-sm" style="padding: 0px">
+            <div id="demo" class="carousel slide" data-ride="carousel">
+
+                <!-- Indicators -->
+                <ul class="carousel-indicators">
+                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                    <li data-target="#demo" data-slide-to="1"></li>
+                    <!--<li data-target="#demo" data-slide-to="2"></li>-->
+                </ul>
+
+                <!-- The slideshow -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="card bg-dark">
+                            <div class="card-header" style="background: #0d0d0d">
+
+                                <h1 style="color: #ff0040">SAP </h1>
+
+                            </div>
+                            <div class="card-body" style="background: black">Content</div>
+                            <div class="card-footer" style="background: black">Footer</div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card bg-dark">
+                            <div class="card-header" style="background: #0d0d0d">
+                                <h1 style="color: #ff0040">Tata Consultancy Services (TCS) </h1>
+                            </div>
+                            <div class="card-body" style="background: black">
+                                <div class="row">
+                                    <div class="col-sm">
+                                        <h3 style="color: #ff0040">Responsibilities Handled:</h3>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm">
+                                        <ul style="color: #ff0040">
+                                            <li>Developed and implemented a TCS proprietary solution called as <b>Smart
+                                                Mapper</b> with Lloyds Bank that enables the source to target mapping,
+                                                ER model, Data Dictionary and SQL Script for target tables.
+                                            </li>
+                                            <li>Modernised the existing solution called <b>Data Health Monitor</b>,
+                                                which is a technology-agnostic integrated framework designed to assess,
+                                                monitor, manage and control data quality across the enterprise.
+                                            </li>
+                                            <li>Enhanced an accelerator called <b>Info Bridge</b> to fit in the Business
+                                                Process of Santander Bank. This tool is a Dictionary of business terms
+                                                and its relationship across the enterprise. This bridges the definition
+                                                of key terms across business and IT.
+                                            </li>
+                                            <li>Developed an automation tool called <b>Business Objects Web
+                                                Companion</b> to extract all the metadata information’s of reports by
+                                                connecting to the BO server and placing it into the tables which in turn
+                                                used for various Analytics purpose.
+                                            </li>
+                                            <li>Developed a <b>Big Data Ingestion Framework</b> that extracts data from
+                                                the variety of sources, e.g.,Files, Databases, Event Streams, Log files
+                                                etc., ingests into one centralised Data Lake within HadoopEcosystem and
+                                                this happens in the same execution framework, and manage metadata of
+                                                different sources in one place.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer" style="background: black">
+                                <div class="row">
+                                    <div class="col-sm">
+                                        <h4 style="color: #ff0040">Key Achievements:</h4>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm">
+                                        <ul style="color: #ff0040">
+                                            <li>Rated as one among the <b>Top 1%</b> in the annual rating given by TCS.
+                                            </li>
+                                            <li>Recipient of <b>KUDOS</b> award for being star performer in the training
+                                                given by the TCS.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="row" style="height: 10px"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Left and right controls -->
+                <span class="carousel-control-prev float-left" data-target="#demo" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </span>
+                <span class="carousel-control-next" data-target="#demo" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </span>
+
+            </div>
+
+
+        </div>
+        <div class="col-sm-1"></div>
+    </div>
+
+</div>
+<div class="container-fluid" style="background: black; align-content: center">
+    <div class="row" style="height: 25px"></div>
+    <div class="row" style="height: 100px;background: black">
+        <div class="col-sm-1"></div>
+        <div class="col-sm">
+            <h2 style="color: #ff0040;text-transform: uppercase"> Personal Projects</h2>
+        </div>
+        <div class="col-sm">
+        </div>
+        <div class="col-sm-1"></div>
+    </div>
+    <div class="row" style="background: black">
+        <div class="col-sm-1" style="border-right: 5px solid #ff4c78"></div>
+        <div class="col-sm overflow">
+
+            <div id="accordion" >
+
+                <div class="card bg-dark">
+                    <div class="card-header">
+                        <span class="card-link" data-toggle="collapse" data-target="#collapseOne">
+                            2018-2019
+                        </span>
+                    </div>
+                    <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                        <div class="card-body">
+                            <ul>
+
+                                    <div class="card bg-dark" style="border-left:5px solid #ff4c78">
+                                        <div class="card-header">
+                        <span class="collapsed card-link" data-toggle="collapse" data-target="#collapseChild1">
+                            Personal Tracker
+                        </span>
+                                        </div>
+                                        <div id="collapseChild1" class="collapse" data-parent="#collapseOne">
+                                            <div class="card-body">
+                                                Lorem ipsum..
+                                            </div>
+                                        </div>
+                                    </div>
+                                <div class="card bg-dark" style="border-left:5px solid #ff4c78">
+                                    <div class="card-header">
+                        <span class="collapsed card-link" data-toggle="collapse" data-target="#collapseChild2">
+                            Birthday wisher
+                        </span>
+                                    </div>
+                                    <div id="collapseChild2" class="collapse" data-parent="#collapseOne">
+                                        <div class="card-body">
+                                            Lorem ipsum..
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="card bg-dark">
+                    <div class="card-header" >
+                        <span class="collapsed card-link" data-toggle="collapse" data-target="#collapseThree">
+                            2019-2020
+                        </span>
+                    </div>
+                    <div id="collapseThree" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-sm-1" style="border-left: 5px solid #ff4c78"></div>
+    </div>
+    <div class="row" style="height: 25px"></div>
+
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+<script>
+
+</script>
+</body>
+</html>
