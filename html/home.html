@@ -5,13 +5,73 @@
     <title>Sethuram</title>
     <link rel="stylesheet" href="css/home.css" >
 </head>
+
 <body>
-<div class = "row">
-    <div class = "col"></div>
-    <div class = "col" style="text-align: center;margin-top: 375px;">
-        <a href="#!landing" class="arrow left"></a>
-        </a></div>
-    <div class = "col"></div>
+<div class="container-fluid" style="color: white">
+    <div class="row" style="height: 35%"> </div>
+    <div class="row" style="height: 55%"></div>
+    <div class="row" style="height: 10%; text-align: center">
+        <div class = "col-sm"></div>
+        <div class = "col-sm">
+            <div class="row" style="height: 50%">
+                <div class = "col-sm-1"></div>
+                <div class = "col-sm">
+                    <h5 class="ml6">
+  <span class="text-wrapper">
+    <span class="letters">Check me out!</span>
+  </span>
+                    </h5>
+                </div>
+                <div class = "col-sm-1"></div>
+            </div>
+            <div class="row" style="height: 50%">
+                <div class = "col-sm"></div>
+                <div class = "col-sm ">
+                    <div class="row" style="height: 50%">
+                        <div class = "col-sm"></div>
+                        <div class = "col-sm ">
+                            <a href="#!landing" class="arrow left "></a>
+                        </div>
+                        <div class = "col-sm "></div>
+                    </div>
+                </div>
+                <div class = "col-sm"></div>
+            </div>
+        </div>
+        <div class = "col-sm"></div>
+
+    </div>
+
+    <!---->
+<!--<div class = "row" style="text-align: center">-->
+    <!--<div class = "col" style=""></div>-->
+    <!--<div class = "col">-->
+        <!--<a href="#!landing" class="arrow left"></a>-->
+        <!--</a></div>-->
+
 </div>
+</div>
+<script>
+    $('.ml6 .letters').each(function(){
+        $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+    });
+
+    anime.timeline({loop: true})
+        .add({
+            targets: '.ml6 .letter',
+            translateY: ["1.1em", 0],
+            translateZ: 0,
+            duration: 750,
+            delay: function(el, i) {
+                return 50 * i;
+            }
+        }).add({
+        targets: '.ml6',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 1000
+    });
+</script>
 </body>
 </html>
