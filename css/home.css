@@ -1,12 +1,12 @@
-body {
 
+
+#particles-js{
+    height: 90%;
+    background-color: black;
     background-image: url("css-images/background.jpg");
-
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
-
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
 }
 
 
