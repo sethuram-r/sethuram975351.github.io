@@ -5,12 +5,16 @@
     <title>Sethuram</title>
     <link rel="stylesheet" href="css/home.css" >
 </head>
+<style>
 
-<body>
+
+
+</style>
+
+<body >
+<div id="particles-js"></div>
 <div class="container-fluid" style="color: white">
-    <div class="row" style="height: 35%"> </div>
-    <div class="row" style="height: 55%"></div>
-    <div class="row" style="height: 10%; text-align: center">
+    <div class="row" style="height: 10%; text-align: center;background: #191919">
         <div class = "col-sm"></div>
         <div class = "col-sm">
             <div class="row" style="height: 50%">
@@ -42,15 +46,12 @@
 
     </div>
 
-    <!---->
-<!--<div class = "row" style="text-align: center">-->
-    <!--<div class = "col" style=""></div>-->
-    <!--<div class = "col">-->
-        <!--<a href="#!landing" class="arrow left"></a>-->
-        <!--</a></div>-->
 
 </div>
-</div>
+<script src="js/particles.js"></script>
+<script src="js/particle-app.js"></script>
+
+
 <script>
     $('.ml6 .letters').each(function(){
         $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
