@@ -5,5 +5,9 @@ app.controller('mainController', function ($scope) {
         $(this).toggleClass("open");
     });
 
+    $(function() {
+        FastClick.attach(document.body);
+    });
+
 
 });
