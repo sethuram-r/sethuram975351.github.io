@@ -294,3 +294,15 @@
 }
 q:before { content: "»" }
 q:after  { content: "«" }
+
+.shut{
+    font-family: "Varela Round";
+    text-decoration: none;
+    color: #969696;
+}
+
+.shut:hover{
+    color: #fff;
+    text-decoration: none;
+    font-family: "Varela Round";
+}

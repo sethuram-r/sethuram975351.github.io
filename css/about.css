@@ -30,6 +30,17 @@
     user-select: none;
 }
 
+.shut{
+    font-family: "Varela Round";
+    text-decoration: none;
+    color: #969696;
+}
+
+.shut:hover{
+    color: #fff;
+    text-decoration: none;
+    font-family: "Varela Round";
+}
 .button a {
     color: #969696;
     font-family: "Varela Round";
