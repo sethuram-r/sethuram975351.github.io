@@ -58,3 +58,41 @@
     display: inline-block;
     line-height: 1em;
 }
+
+.mobileShow {display: none; }
+
+/* Smartphone Portrait and Landscape */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px){
+    .mobileShow {display: inline;}
+}
+
+@keyframes blink{
+    0%{opacity: 0;}
+    25%{opacity: .25;}
+    50%{opacity: .5;}
+    75%{opacity: .75;}
+    100%{opacity: 1;}
+}
+.notice {
+    padding: 15px;
+    background-color: #fafafa;
+    border-left: 10px solid #7f7f84;
+    -webkit-box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
+    box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
+    color: #d73814;
+    animation: blink 2.5s linear infinite;
+    border-radius: 2px;
+}
+.notice-lg {
+    padding: 35px;
+    font-size: large;
+}
+.notice-danger {
+    border-color: #d73814;
+}
+.notice-danger>strong {
+    color: #d73814;
+}
