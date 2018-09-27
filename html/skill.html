@@ -267,20 +267,30 @@
         }
 
 
+        .mobileShow {display: inline; }
+
+        /* Smartphone Portrait and Landscape */
+        @media only screen
+        and (min-device-width : 320px)
+        and (max-device-width : 480px){
+            .mobileShow {display: none;}
+        }
+
+
 
     </style>
 </head>
 <body>
 
-<div class="container-fluid " style="height: 100%;background:black;">
-    <div class="row" style="height: 10%">
-        <div class="col-sm"></div>
-        <div class="col-sm"></div>
-        <div class="col-sm">
+<div class="container-fluid " style="background:black; height: 105%">
+    <div class="row" >
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col">
             <div class="row">
-                <div class = "col-sm"></div>
-                <div class = "col-sm"></div>
-                <div class = "col-sm" style="    padding-right: 0px;">
+                <div class = "col"></div>
+                <div class = "col"></div>
+                <div class = "col" style="    padding-right: 0px;">
                     <a  class = "shut" href="#!landing">
                     <div class="button">
 
@@ -293,9 +303,9 @@
             </div>
         </div>
     </div>
-    <div class="row" style="height: 10%" >
-        <div class="col-sm"></div>
-        <div class="col-sm">
+    <div class="row">
+        <div class="col"></div>
+        <div class="col">
             <div class="row" style="text-align: center">
                 <div class="col-sm-1"></div>
                 <div class="col-sm" style="color:  #ff0040; text-shadow: 0 0 10px #ff0040;"><h1>MY SKILLS</h1></div>
@@ -315,12 +325,13 @@
         </div>
         <div class="col-sm"></div>
     </div>
+
     <div class="row" style="height: 10%"></div>
 
-    <div class="row" style="height: 70%">
+    <div class="row">
         <div class="col-sm-1"></div>
 
-        <div class="col-sm" style="height: 50px">
+        <div class="col-sm">
             <div class='row dashboard-cards'>
                 <div class='card col-sm-3'>
                     <div class='card-title'>
@@ -400,6 +411,8 @@
                                 </li>
                                 <li>
                                     Apache Lucene
+                                    <span class="mobileShow"> <i class="far fa-eye"  data-toggle="modal" data-target="#exampleModal" data-whatever="Information Retrieval Work"> &nbspView</i> </span>
+
                                 </li>
                             </ul>
                         </div>
@@ -549,7 +562,9 @@
                         <div class='card-description'>
                             <ul class='task-list'>
                                 <li>Tableau</li>
-                                <li>D3 JS</li>
+                                <li>D3 JS
+                                    <span class="mobileShow"> <i class="far fa-eye"  data-toggle="modal" data-target="#exampleModal" data-whatever="Data visulaization Work"> &nbspView</i> </span>
+                                </li>
                             </ul>
                         </div>
                         <div class='card-flap flap2'>
@@ -588,7 +603,9 @@
                     <div class='card-flap flap1'>
                         <div class='card-description'>
                             <ul class='task-list'>
-                                <li>Google NLP API</li>
+                                <li>Google NLP API
+                                    <span class="mobileShow"> <i class="far fa-eye"  data-toggle="modal" data-target="#exampleModal" data-whatever="Sentiment Analysis Work"> &nbspView</i> </span>
+                                </li>
                                 <li>Vader</li>
                             </ul>
                         </div>
@@ -619,10 +636,64 @@
                         </div>
                     </div>
                 </div>
+                <div class='card col-md-4'>
+                    <div class='card-title'>
+                        <h2>
+                            Analytics
+                        </h2>
+                    </div>
+                    <div class='card-flap flap1'>
+                        <div class='card-description'>
+                            <ul class='task-list'>
+                                <li>Data Analysis
+                                    <span class="mobileShow"> <i class="far fa-eye"  data-toggle="modal" data-target="#exampleModal" data-whatever="Data Analysis Work"> &nbspView</i> </span>
+                                </li>
+                                <li>Bayesian Modelling
+                                    <span class="mobileShow"> <i class="far fa-eye"  data-toggle="modal" data-target="#exampleModal" data-whatever="Bayesian Modelling Work"> &nbspView</i> </span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class='card-flap flap2'>
+                            <div class='card-actions'>
+                                <a class='btn' href='#'>Close</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </div>
         <div class="col-sm-1"></div>
+    </div>
+
+</div>
+<div class="container">
+
+    <div class="modal fade bd-example-modal-lg" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"></h5>
+                    <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+                        <!--<span aria-hidden="true">&times;</span>-->
+                    <!--</button>-->
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row"></div>
+                        <div class="row">
+                            <div class="col">
+                                <object class="pdf" data='' type='application/pdf' width='100%' height="71.5%"></object>
+                            </div>
+                        </div>
+                        <div class="row"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
     </div>
 
 </div>
@@ -676,6 +747,31 @@
             }
 
         });
+
+    });
+    $('#exampleModal').on('show.bs.modal', function (event) {
+
+        var button = $(event.relatedTarget) // Button that triggered the modal
+        var recipient = button.data('whatever') // Extract info from data-* attributes
+        // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+        // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+        var modal = $(this)
+        modal.find('.modal-title').text(recipient)
+        if (recipient == "Data Analysis Work"){
+            console.log("inside")
+            modal.find('.pdf').attr("data",'extras/Data_Analytics.pdf')
+        }else if  (recipient == "Bayesian Modelling Work"){
+            modal.find('.pdf').attr("data",'extras/Bayesian_ Modelling.pdf')
+        }else if (recipient == "Data visulaization Work"){
+            modal.find('.pdf').attr("data",'extras/visualization.pdf')
+
+        }else if (recipient == "Sentiment Analysis Work"){
+            modal.find('.pdf').attr("data",'extras/sentiment.pdf')
+        }else if (recipient == "Information Retrieval Work"){
+            modal.find('.pdf').attr("data",'extras/Information_Retrieval.pdf')
+        }
+
+
     });
 
 </script>
