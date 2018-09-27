@@ -1,4 +1,29 @@
+
+$('#exampleModal').on('show.bs.modal', function (event) {
+
+    var button = $(event.relatedTarget) // Button that triggered the modal
+    var recipient = button.data('whatever') // Extract info from data-* attributes
+    // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+    // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+    var modal = $(this)
+    modal.find('.modal-title').text(recipient)
+    if (recipient == "Data Analysis Work"){
+        modal.find('.pdf').attr("data",'extras/Data_Analytics.pdf')
+    }else if  (recipient == "Bayesian Modelling Work"){
+        modal.find('.pdf').attr("data",'extras/Bayesian_ Modelling.pdf')
+    }else if (recipient == "Data visulaization Work"){
+        modal.find('.pdf').attr("data",'extras/visualization.pdf')
+
+    }else if (recipient == "Sentiment Analysis Work"){
+        modal.find('.pdf').attr("data",'extras/sentiment.pdf')
+    }else if (recipient == "Information Retrieval Work"){
+        modal.find('.pdf').attr("data",'extras/Information_Retrieval.pdf')
+    }
+
+
+});
 $(document).ready(function(){
+
     var zindex = 10;
 
 
@@ -42,28 +67,5 @@ $(document).ready(function(){
         }
 
     });
-
-});
-$('#exampleModal').on('show.bs.modal', function (event) {
-
-    var button = $(event.relatedTarget) // Button that triggered the modal
-    var recipient = button.data('whatever') // Extract info from data-* attributes
-    // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-    // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-    var modal = $(this)
-    modal.find('.modal-title').text(recipient)
-    if (recipient == "Data Analysis Work"){
-        modal.find('.pdf').attr("data",'extras/Data_Analytics.pdf')
-    }else if  (recipient == "Bayesian Modelling Work"){
-        modal.find('.pdf').attr("data",'extras/Bayesian_ Modelling.pdf')
-    }else if (recipient == "Data visulaization Work"){
-        modal.find('.pdf').attr("data",'extras/visualization.pdf')
-
-    }else if (recipient == "Sentiment Analysis Work"){
-        modal.find('.pdf').attr("data",'extras/sentiment.pdf')
-    }else if (recipient == "Information Retrieval Work"){
-        modal.find('.pdf').attr("data",'extras/Information_Retrieval.pdf')
-    }
-
 
 });
