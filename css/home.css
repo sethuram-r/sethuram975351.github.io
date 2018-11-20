@@ -4,7 +4,7 @@
     height: 90%;
     background-color: black;
     background-image: url("css-images/sethu.jpg");
-    background-size: cover;
+    background-size: inherit;
     background-position: 50% 54%;
     background-repeat: no-repeat;
 }
